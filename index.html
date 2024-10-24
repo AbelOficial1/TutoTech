@@ -11,6 +11,8 @@
             margin: 0;
             padding: 0;
             display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
         }
         .container {
@@ -44,10 +46,12 @@
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
+            
         }
         .header .buttons .login {
             background-color: #007bff;
             color: #fff;
+            text-decoration: none;
         }
         .header .buttons .register {
             background-color: #6c757d;
@@ -92,17 +96,31 @@
             color: #fff;
             font-size: 16px;
             cursor: pointer;
+            
         }
         .form-container .links {
             display: flex;
             justify-content: space-between;
             font-size: 14px;
-            color: #6c757d;
+            color: #ffffff;
+            text-decoration: none;
         }
         .form-container .links a {
             color: #6c757d;
             text-decoration: none;
         }
+        .form-container .button a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+
+
+
   </style>
  </head>
  <body>
@@ -118,9 +136,17 @@
      <button class="login">
       Iniciar sesión
      </button>
+     <a href="Registro.html">
      <button class="register">
       Registrar
-     </button>
+     </button></a>
+
+
+     <div class="button">
+     <button class="Login">
+     <a href="index.html" onclick="signOut();">Sign out</a>   
+     </button></div>
+     
     </div>
    </div>
    <div class="form-container">
@@ -136,9 +162,46 @@
       Contraseña
      </label>
      <input id="password" placeholder="Mínimo 8 caracteres" type="password"/>
-     <button type="submit">
-      Iniciar sesión
-     </button>
+     
+     
+     
+     <div class="button">
+     <a href="PantallaPrincipal.html">
+     <button class="Login">
+      Iniciar sesión</a>
+     </button></div>
+
+
+
+     <script src="https://apis.google.com/js/platform.js" async defer></script>
+     <meta name="google-signin-client_id" content="380046486404-v768pn8ke3bd42gaou7jfdur2s3k3665.apps.googleusercontent.com">
+     <div class="g-signin2" data-onsuccess="onSignIn" href="PantallaPrincipal.html"></div>
+     
+     
+     
+
+    <script>
+        function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log(id_token);
+        }
+
+        function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+        console.log('User signed out.');
+        });
+    }
+
+    </script>
+
+
+
     </form>
     <div class="links">
      <a href="#">
