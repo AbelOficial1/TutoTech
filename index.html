@@ -1,11 +1,13 @@
-<html>
- <head>
-  <title>
-   TutoTech - Iniciar sesión
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-   body {
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TutoTech - Iniciar sesión</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <meta name="google-signin-client_id" content="380046486404-v768pn8ke3bd42gaou7jfdur2s3k3665.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer onload="initializeGoogleSignIn()"></script>
+    <style>
+           body {
             font-family: Arial, sans-serif;
             background-color: #f5f7fa;
             margin: 0;
@@ -118,89 +120,72 @@
             text-decoration: none;
         }
 
-  </style>
- </head>
- <body>
-  <div class="container">
-   <div class="header">
-    <div class="logo">
-     <img alt="TutoTech Logo" height="50" src="Logo.png" width="50"/>
-     <span class="title">
-      TutoTech
-     </span>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img alt="TutoTech Logo" height="50" src="Logo.png" width="50"/>
+                <span class="title">TutoTech</span>
+            </div>
+            <div class="buttons">
+                <button class="login">Iniciar sesión</button>
+                <a href="Registro.html"><button class="register">Registrar</button></a>
+                <button class="Login" onclick="signOut()">Sign out</button>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h2>Bienvenido</h2>
+            <form>
+                <label for="email">Correo electrónico</label>
+                <input id="email" placeholder="Ej. tu@correo.com" type="email"/>
+                <label for="password">Contraseña</label>
+                <input id="password" placeholder="Mínimo 8 caracteres" type="password"/>
+
+                <button type="submit" class="Login">Iniciar sesión</button>
+            </form>
+
+            <!-- Botón de Google Sign-In -->
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+            <div class="links">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <a href="Registro.html">¿Aún no tienes cuenta? Regístrate</a>
+            </div>
+        </div>
     </div>
-    <div class="buttons">
-     <button class="login">
-      Iniciar sesión
-     </button>
-     <a href="Registro.html">
-     <button class="register">
-      Registrar
-     </button></a>
-
-
-     <div class="button">
-     <button class="Login">
-     <a href="index.html" onclick="signOut();">Sign out</a>   
-     </button></div>
-     
-    </div>
-   </div>
-   <div class="form-container">
-    <h2>
-     Bienvenido
-    </h2>
-    <form>
-     <label for="email">
-      Correo electrónico
-     </label>
-     <input id="email" placeholder="Ej. tu@correo.com" type="email"/>
-     <label for="password">
-      Contraseña
-     </label>
-     <input id="password" placeholder="Mínimo 8 caracteres" type="password"/>
-     
-     <div class="button">
-     <a href="PantallaPrincipal.html">
-     <button class="Login">
-      Iniciar sesión</a>
-     </button></div>
-
-
-     <script src="https://apis.google.com/js/platform.js" async defer></script>
-     <meta name="google-signin-client_id" content="380046486404-v768pn8ke3bd42gaou7jfdur2s3k3665.apps.googleusercontent.com">
-     <div class="g-signin2" data-onsuccess="onSignIn" href="PantallaPrincipal.html"></div>
 
     <script>
-        function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log(id_token);
+        // Inicializa Google Auth después de que se cargue el script
+        function initializeGoogleSignIn() {
+            gapi.load('auth2', function() {
+                gapi.auth2.init();
+            });
         }
 
-        function signOut() {
-        var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function () {
-        console.log('User signed out.');
-        });
-    }
+        // Función de inicio de sesión con Google
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId());
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail());
+            var id_token = googleUser.getAuthResponse().id_token;
+            console.log('ID Token: ' + id_token);
 
+            // Redirige después de iniciar sesión
+            window.location.href = "PantallaPrincipal.html";
+        }
+
+        // Función para cerrar sesión
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+            });
+        }
     </script>
-     
-    </form>
-    <div class="links">
-     <a href="#">
-      ¿Olvidaste tu contraseña?
-     </a>
-     <a href="Registro.html">
-      ¿Aún no tienes cuenta? Resgistrate
-     </a>
-    </div>
-   </div>
-  </div>
- </body>
+</body>
 </html>
