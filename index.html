@@ -160,10 +160,14 @@
     <script>
         // Inicializa Google Auth después de que se cargue el script
         function initializeGoogleSignIn() {
-            gapi.load('auth2', function() {
-                gapi.auth2.init();
-            });
-        }
+    gapi.load('auth2', function() {
+        gapi.auth2.init({
+            client_id: '380046486404-v768pn8ke3bd42gaou7jfdur2s3k3665.apps.googleusercontent.com'
+        }).then(function() {
+            console.log("Google Auth initialized");
+        });
+    });
+}
 
         // Función de inicio de sesión con Google
         function onSignIn(googleUser) {
