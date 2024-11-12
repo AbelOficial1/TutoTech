@@ -1,0 +1,640 @@
+<html>
+
+<head>
+    <title>
+        TutoTech - Evaluación docente
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header img {
+            height: 40px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .header .menu-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .header .user-icon {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        .title {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .title h2 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .title p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .rating-scale {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .rating-scale span {
+            display: inline-block;
+            width: 60px;
+            text-align: center;
+        }
+
+        .rating-scale .description {
+            display: inline-block;
+            width: 60px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .section {
+            margin: 20px 0;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .question {
+            margin: 10px 0;
+        }
+
+        .question p {
+            margin: 0;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin: 5px 0;
+        }
+
+        .rating input {
+            margin: 0 5px;
+        }
+
+        .rating label {
+            text-align: center;
+            width: 60px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .rating-number {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin-top: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .footer button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img alt="Logo" height="40"
+                src="https://storage.googleapis.com/a1aa/image/PxaaviDeLPRRGKek2rLqvNQZl5EPt0xXPOheZ7jQ8V0QwUgnA.jpg"
+                width="40" />
+            <h1>
+                TutoTech
+            </h1>
+            <div style="display: flex; align-items: center;">
+                <i class="fas fa-bars menu-icon">
+                </i>
+                <img alt="User Icon" class="user-icon" height="40"
+                    src="https://storage.googleapis.com/a1aa/image/BGMw8TS0R0JZJVZhBguPVZgT6MDNqDhWZa3DSYZd8fRUNF4JA.jpg"
+                    width="40" />
+            </div>
+        </div>
+        <div class="title">
+            <h2>
+                Evaluación docente
+            </h2>
+            <p>
+                En una escala del 1 al 5, donde 1 es insuficiente y 5 es excelente, evalúe los siguientes ítems:
+            </p>
+        </div>
+        <div class="rating-scale">
+            <div class="description">
+                Insuficiente
+            </div>
+            <div class="description">
+                Deficiente
+            </div>
+            <div class="description">
+                Regular
+            </div>
+            <div class="description">
+                Bueno
+            </div>
+            <div class="description">
+                Excelente
+            </div>
+            <br />
+            <span>
+                1
+            </span>
+            <span>
+                2
+            </span>
+            <span>
+                3
+            </span>
+            <span>
+                4
+            </span>
+            <span>
+                5
+            </span>
+        </div>
+        <div class="section">
+            <h3>
+                A. Dominio personal
+            </h3>
+            <div class="question">
+                <p>
+                    1. El docente demuestra estar informado en publicaciones de la materia.
+                </p>
+                <div class="rating">
+                    <input id="q1-1" name="q1" type="radio" value="1" />
+                    <input id="q1-2" name="q1" type="radio" value="2" />
+                    <input id="q1-3" name="q1" type="radio" value="3" />
+                    <input id="q1-4" name="q1" type="radio" value="4" />
+                    <input id="q1-5" name="q1" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q1-1">
+                        1
+                    </label>
+                    <label for="q1-2">
+                        2
+                    </label>
+                    <label for="q1-3">
+                        3
+                    </label>
+                    <label for="q1-4">
+                        4
+                    </label>
+                    <label for="q1-5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="question">
+                <p>
+                    2. El docente utiliza y recomienda bibliografía de calidad.
+                </p>
+                <div class="rating">
+                    <input id="q2-1" name="q2" type="radio" value="1" />
+                    <input id="q2-2" name="q2" type="radio" value="2" />
+                    <input id="q2-3" name="q2" type="radio" value="3" />
+                    <input id="q2-4" name="q2" type="radio" value="4" />
+                    <input id="q2-5" name="q2" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q2-1">
+                        1
+                    </label>
+                    <label for="q2-2">
+                        2
+                    </label>
+                    <label for="q2-3">
+                        3
+                    </label>
+                    <label for="q2-4">
+                        4
+                    </label>
+                    <label for="q2-5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="question">
+                <p>
+                    3. El docente busca un buen balance entre teoría y experimentación.
+                </p>
+                <div class="rating">
+                    <input id="q3-1" name="q3" type="radio" value="1" />
+                    <input id="q3-2" name="q3" type="radio" value="2" />
+                    <input id="q3-3" name="q3" type="radio" value="3" />
+                    <input id="q3-4" name="q3" type="radio" value="4" />
+                    <input id="q3-5" name="q3" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q3-1">
+                        1
+                    </label>
+                    <label for="q3-2">
+                        2
+                    </label>
+                    <label for="q3-3">
+                        3
+                    </label>
+                    <label for="q3-4">
+                        4
+                    </label>
+                    <label for="q3-5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="question">
+                <p>
+                    4. El docente domina los métodos experimentales y de estudio.
+                </p>
+                <div class="rating">
+                    <input id="q4-1" name="q4" type="radio" value="1" />
+                    <input id="q4-2" name="q4" type="radio" value="2" />
+                    <input id="q4-3" name="q4" type="radio" value="3" />
+                    <input id="q4-4" name="q4" type="radio" value="4" />
+                    <input id="q4-5" name="q4" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q4-1">
+                        1
+                    </label>
+                    <label for="q4-2">
+                        2
+                    </label>
+                    <label for="q4-3">
+                        3
+                    </label>
+                    <label for="q4-4">
+                        4
+                    </label>
+                    <label for="q4-5">
+                        5
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h3>
+                B. ESTRATEGIAS DE ENSEÑANZA PARA EL APRENDIZAJE
+            </h3>
+            <div class="question">
+                <p>
+                    5. El docente presenta materiales, recursos, metodologías y actividades de aprendizaje coherentes
+                    con los temas de la asignatura y los objetivos del curso.
+                </p>
+                <div class="rating">
+                    <input id="q5-1" name="q5" type="radio" value="1" />
+                    <input id="q5-2" name="q5" type="radio" value="2" />
+                    <input id="q5-3" name="q5" type="radio" value="3" />
+                    <input id="q5-4" name="q5" type="radio" value="4" />
+                    <input id="q5-5" name="q5" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q5-1">
+                        1
+                    </label>
+                    <label for="q5-2">
+                        2
+                    </label>
+                    <label for="q5-3">
+                        3
+                    </label>
+                    <label for="q5-4">
+                        4
+                    </label>
+                    <label for="q5-5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="question">
+                <p>
+                    6. El docente utiliza estrategias de evaluación congruentes con los resultados de aprendizaje
+                    establecidos.
+                </p>
+                <div class="rating">
+                    <input id="q6-1" name="q6" type="radio" value="1" />
+                    <input id="q6-2" name="q6" type="radio" value="2" />
+                    <input id="q6-3" name="q6" type="radio" value="3" />
+                    <input id="q6-4" name="q6" type="radio" value="4" />
+                    <input id="q6-5" name="q6" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q6-1">
+                        1
+                    </label>
+                    <label for="q6-2">
+                        2
+                    </label>
+                    <label for="q6-3">
+                        3
+                    </label>
+                    <label for="q6-4">
+                        4
+                    </label>
+                    <label for="q6-5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="question">
+                <p>
+                    7. El docente utiliza estrategias de aprendizaje desafiantes para los alumnos.
+                </p>
+                <div class="rating">
+                    <input id="q7-1" name="q7" type="radio" value="1" />
+                    <input id="q7-2" name="q7" type="radio" value="2" />
+                    <input id="q7-3" name="q7" type="radio" value="3" />
+                    <input id="q7-4" name="q7" type="radio" value="4" />
+                    <input id="q7-5" name="q7" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q7-1">
+                        1
+                    </label>
+                    <label for="q7-2">
+                        2
+                    </label>
+                    <label for="q7-3">
+                        3
+                    </label>
+                    <label for="q7-4">
+                        4
+                    </label>
+                    <label for="q7-5">
+                        5
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h3>
+                C. AMBIENTE DE APRENDIZAJE
+            </h3>
+            <div class="question">
+                <p>
+                    8. El docente aporta herramientas y guía tanto al inicio y cierre de las sesiones de trabajo.
+                </p>
+                <div class="rating">
+                    <input id="q8-1" name="q8" type="radio" value="1" />
+                    <input id="q8-2" name="q8" type="radio" value="2" />
+                    <input id="q8-3" name="q8" type="radio" value="3" />
+                    <input id="q8-4" name="q8" type="radio" value="4" />
+                    <input id="q8-5" name="q8" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q8-1">
+                        1
+                    </label>
+                    <label for="q8-2">
+                        2
+                    </label>
+                    <label for="q8-3">
+                        3
+                    </label>
+                    <label for="q8-4">
+                        4
+                    </label>
+                    <label for="q8-5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="question">
+                <p>
+                    9. El docente está disponible para las preguntas.
+                </p>
+                <div class="rating">
+                    <input id="q9-1" name="q9" type="radio" value="1" />
+                    <input id="q9-2" name="q9" type="radio" value="2" />
+                    <input id="q9-3" name="q9" type="radio" value="3" />
+                    <input id="q9-4" name="q9" type="radio" value="4" />
+                    <input id="q9-5" name="q9" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q9-1">
+                        1
+                    </label>
+                    <label for="q9-2">
+                        2
+                    </label>
+                    <label for="q9-3">
+                        3
+                    </label>
+                    <label for="q9-4">
+                        4
+                    </label>
+                    <label for="q9-5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="question">
+                <p>
+                    10. El docente propicia un ambiente de aprendizaje - trabajo basado en la confianza y el respeto.
+                </p>
+                <div class="rating">
+                    <input id="q10-1" name="q10" type="radio" value="1" />
+                    <input id="q10-2" name="q10" type="radio" value="2" />
+                    <input id="q10-3" name="q10" type="radio" value="3" />
+                    <input id="q10-4" name="q10" type="radio" value="4" />
+                    <input id="q10-5" name="q10" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q10-1">
+                        1
+                    </label>
+                    <label for="q10-2">
+                        2
+                    </label>
+                    <label for="q10-3">
+                        3
+                    </label>
+                    <label for="q10-4">
+                        4
+                    </label>
+                    <label for="q10-5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="question">
+                <p>
+                    11. El docente tiene estrategias para el desarrollo de su asignatura según el clima y la lógica de
+                    la institución.
+                </p>
+                <div class="rating">
+                    <input id="q11-1" name="q11" type="radio" value="1" />
+                    <input id="q11-2" name="q11" type="radio" value="2" />
+                    <input id="q11-3" name="q11" type="radio" value="3" />
+                    <input id="q11-4" name="q11" type="radio" value="4" />
+                    <input id="q11-5" name="q11" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q11-1">
+                        1
+                    </label>
+                    <label for="q11-2">
+                        2
+                    </label>
+                    <label for="q11-3">
+                        3
+                    </label>
+                    <label for="q11-4">
+                        4
+                    </label>
+                    <label for="q11-5">
+                        5
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h3>
+                D. DOMINIO RELACIONAL
+            </h3>
+            <div class="question">
+                <p>
+                    12. El docente mantiene relaciones abiertas, atentas y participas acordes con los declarados por la
+                    institución.
+                </p>
+                <div class="rating">
+                    <input id="q12-1" name="q12" type="radio" value="1" />
+                    <input id="q12-2" name="q12" type="radio" value="2" />
+                    <input id="q12-3" name="q12" type="radio" value="3" />
+                    <input id="q12-4" name="q12" type="radio" value="4" />
+                    <input id="q12-5" name="q12" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q12-1">
+                        1
+                    </label>
+                    <label for="q12-2">
+                        2
+                    </label>
+                    <label for="q12-3">
+                        3
+                    </label>
+                    <label for="q12-4">
+                        4
+                    </label>
+                    <label for="q12-5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="question">
+                <p>
+                    13. El docente propicia un ambiente de interacción Estudiante-Profesor.
+                </p>
+                <div class="rating">
+                    <input id="q13-1" name="q13" type="radio" value="1" />
+                    <input id="q13-2" name="q13" type="radio" value="2" />
+                    <input id="q13-3" name="q13" type="radio" value="3" />
+                    <input id="q13-4" name="q13" type="radio" value="4" />
+                    <input id="q13-5" name="q13" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q13-1">
+                        1
+                    </label>
+                    <label for="q13-2">
+                        2
+                    </label>
+                    <label for="q13-3">
+                        3
+                    </label>
+                    <label for="q13-4">
+                        4
+                    </label>
+                    <label for="q13-5">
+                        5
+                    </label>
+                </div>
+            </div>
+            <div class="question">
+                <p>
+                    14. El docente propicia el trabajo en equipo.
+                </p>
+                <div class="rating">
+                    <input id="q14-1" name="q14" type="radio" value="1" />
+                    <input id="q14-2" name="q14" type="radio" value="2" />
+                    <input id="q14-3" name="q14" type="radio" value="3" />
+                    <input id="q14-4" name="q14" type="radio" value="4" />
+                    <input id="q14-5" name="q14" type="radio" value="5" />
+                </div>
+                <div class="rating-number">
+                    <label for="q14-1">
+                        1
+                    </label>
+                    <label for="q14-2">
+                        2
+                    </label>
+                    <label for="q14-3">
+                        3
+                    </label>
+                    <label for="q14-4">
+                        4
+                    </label>
+                    <label for="q14-5">
+                        5
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <button>
+                Enviar Respuestas
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
