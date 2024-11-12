@@ -1,17 +1,19 @@
 <html>
- <head>
-  <title>
-   TutoTech
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
-  <style>
-   body {
+
+<head>
+    <title>
+        TutoTech
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
         }
+
         .header {
             display: flex;
             justify-content: space-between;
@@ -19,34 +21,48 @@
             padding: 10px 20px;
             background-color: #fff;
             border-bottom: 1px solid #ddd;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e0e0e0;
         }
+
         .header img {
             height: 40px;
             border-radius: 50%;
         }
+
         .header .logo {
             display: flex;
             align-items: center;
         }
+
         .header .logo img {
             margin-right: 10px;
         }
+
         .header .menu-icon {
             font-size: 24px;
             margin-right: 20px;
         }
+
         .header .profile-button {
             background: none;
             border: none;
             cursor: pointer;
         }
+
         .header .right-section {
             display: flex;
             align-items: center;
         }
+
         .main-content {
             padding: 20px;
         }
+
         .welcome-banner {
             position: relative;
             background-image: url('https://storage.googleapis.com/a1aa/image/3dn32wQVewxeWEWYRGLRL2v6ora4IMdgaMVUAqf71MxtfVecC.jpg');
@@ -57,10 +73,12 @@
             padding: 20px;
             text-align: left;
         }
+
         .welcome-banner h1 {
             margin: 0;
             font-size: 36px;
         }
+
         .welcome-banner .view-all-btn {
             background-color: #007bff;
             color: #fff;
@@ -72,13 +90,16 @@
             display: inline-block;
             margin-top: 20px;
         }
+
         .trending-paths {
             margin-top: 40px;
         }
+
         .trending-paths h2 {
             margin-bottom: 20px;
             font-size: 24px;
         }
+
         .trending-paths .path {
             display: inline-block;
             width: 30%;
@@ -89,10 +110,12 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+
         .trending-paths .path img {
             width: 100%;
             height: auto;
         }
+
         .trending-paths .path p {
             margin: 10px 0;
             padding: 0 10px;
@@ -104,9 +127,12 @@
 
         .carousel {
             position: relative;
-            width: 100%; /* Ajustar al 100% del contenedor */
-            max-width: 700px; /* Ajusta este valor al tamaño que prefieras */
-            height: 440px; /* Altura fija del carrusel */
+            width: 100%;
+            /* Ajustar al 100% del contenedor */
+            max-width: 700px;
+            /* Ajusta este valor al tamaño que prefieras */
+            height: 440px;
+            /* Altura fija del carrusel */
             margin: 20px auto;
             overflow: hidden;
             border-radius: 10px;
@@ -119,15 +145,20 @@
         .carousel-images {
             display: flex;
             transition: transform 0.5s ease-in-out;
-            width: 300%; /* Para que las imágenes se muestren una por una */
+            width: 300%;
+            /* Para que las imágenes se muestren una por una */
         }
 
         .carousel-images img {
-            height: 100%; /*auto Las imágenes ocupan toda la altura del carrusel */
-            width: 100%;  /* Ajusta el ancho automáticamente según el tamaño natural de la imagen */
-            object-fit: cover; /* Asegura que las imágenes no se deformen */
+            height: 100%;
+            /*auto Las imágenes ocupan toda la altura del carrusel */
+            width: 100%;
+            /* Ajusta el ancho automáticamente según el tamaño natural de la imagen */
+            object-fit: cover;
+            /* Asegura que las imágenes no se deformen */
             border-radius: 10px;
-            flex-shrink: 0; /* Evita que se compriman las imágenes */
+            flex-shrink: 0;
+            /* Evita que se compriman las imágenes */
         }
 
         /* Botones de navegación */
@@ -172,121 +203,455 @@
         }
 
         .carousel-indicators .active {
-            background-color:#007bff;
+            background-color: #007bff;
+        }
+        .header h1 {
+            left: 45%;
+            font-size: 24px;
+            margin: 0;
+            justify-content: center;
+            align-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position:fixed;
         }
 
-  </style>
- </head>
- <body>
-  <div class="header">
-   <div class="logo">
-    <img alt="Logo" height="40" src="Logo.png" width="40"/>
-    <span>
-     TutoTech
-    </span>
-   </div>
-   <div class="right-section">
-    <i class="fas fa-bars menu-icon">
-    </i>
-    <button class="profile-button" onclick="window.location.href='Alumno.html'">
-     <img alt="Profile" height="40" src="https://storage.googleapis.com/a1aa/image/3lxtbOp2fYR0Cyg2ldcTcpZ165WutMSW1k9AYMmutCkCxyzJA.jpg" width="40"/>
-    </button>
-   </div>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+.popup {
+  --burger-line-width: 1.125em;
+  --burger-line-height: 0.125em;
+  --burger-offset: 0.625em;
+  --burger-bg: rgba(0, 0, 0, .15);
+  --burger-color: #333;
+  --burger-line-border-radius: 0.1875em;
+  --burger-diameter: 2.125em;
+  --burger-btn-border-radius: calc(var(--burger-diameter) / 2);
+  --burger-line-transition: .3s;
+  --burger-transition: all .1s ease-in-out;
+  --burger-hover-scale: 1.1;
+  --burger-active-scale: .95;
+  --burger-enable-outline-color: var(--burger-bg);
+  --burger-enable-outline-width: 0.125em;
+  --burger-enable-outline-offset: var(--burger-enable-outline-width);
+  /* nav */
+  --nav-padding-x: 0.25em;
+  --nav-padding-y: 0.625em;
+  --nav-border-radius: 0.375em;
+  --nav-border-color: #ccc;
+  --nav-border-width: 0.0625em;
+  --nav-shadow-color: rgba(0, 0, 0, .2);
+  --nav-shadow-width: 0 1px 5px;
+  --nav-bg: #eee;
+  --nav-font-family: Menlo, Roboto Mono, monospace;
+  --nav-default-scale: .8;
+  --nav-active-scale: 1;
+  --nav-position-left: 0;
+  --nav-position-right: unset;
+  /* if you want to change sides just switch one property */
+  /* from properties to "unset" and the other to 0 */
+  /* title */
+  --nav-title-size: 0.625em;
+  --nav-title-color: #777;
+  --nav-title-padding-x: 1rem;
+  --nav-title-padding-y: 0.25em;
+  /* nav button */
+  --nav-button-padding-x: 1rem;
+  --nav-button-padding-y: 0.375em;
+  --nav-button-border-radius: 0.375em;
+  --nav-button-font-size: 12px;
+  --nav-button-hover-bg: #6495ed;
+  --nav-button-hover-text-color: #fff;
+  --nav-button-distance: 0.875em;
+  /* underline */
+  --underline-border-width: 0.0625em;
+  --underline-border-color: #ccc;
+  --underline-margin-y: 0.3125em;
+}
+
+/* popup settings 👆 */
+
+.popup {
+  display: inline-block;
+  text-rendering: optimizeLegibility;
+  position: relative;
+}
+
+.popup input {
+  display: none;
+}
+
+.burger {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: var(--burger-bg);
+  width: var(--burger-diameter);
+  height: var(--burger-diameter);
+  border-radius: var(--burger-btn-border-radius);
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--burger-transition);
+  outline: var(--burger-enable-outline-width) solid transparent;
+  outline-offset: 0;
+}
+
+.burger span {
+  height: var(--burger-line-height);
+  width: var(--burger-line-width);
+  background: var(--burger-color);
+  border-radius: var(--burger-line-border-radius);
+  position: absolute;
+  transition: var(--burger-line-transition);
+}
+
+.burger span:nth-child(1) {
+  top: var(--burger-offset);
+}
+
+.burger span:nth-child(2) {
+  bottom: var(--burger-offset);
+}
+
+.burger span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.popup-window {
+  transform: scale(var(--nav-default-scale));
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding: var(--nav-padding-y) var(--nav-padding-x);
+  background: var(--nav-bg);
+  font-family: var(--nav-font-family);
+  color: var(--nav-text-color);
+  border-radius: var(--nav-border-radius);
+  box-shadow: var(--nav-shadow-width) var(--nav-shadow-color);
+  border: var(--nav-border-width) solid var(--nav-border-color);
+  top: calc(var(--burger-diameter) + var(--burger-enable-outline-width) + var(--burger-enable-outline-offset));
+  right: unset;
+  left: calc(-1 * (var(--burger-diameter) + var(--burger-enable-outline-width)));
+  transition: var(--burger-transition);
+  z-index: 1000;
+}
+
+.popup-window legend {
+  padding: var(--nav-title-padding-y) var(--nav-title-padding-x);
+  margin: 0;
+  color: var(--nav-title-color);
+  font-size: var(--nav-title-size);
+  text-transform: uppercase;
+}
+
+.popup-window ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.popup-window ul button {
+  outline: none;
+  width: 100%;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  color: var(--burger-color);
+  font-size: var(--nav-button-font-size);
+  padding: var(--nav-button-padding-y) var(--nav-button-padding-x);
+  white-space: nowrap;
+  border-radius: var(--nav-button-border-radius);
+  cursor: pointer;
+  column-gap: var(--nav-button-distance);
+}
+
+.popup-window ul li:nth-child(1) svg,
+.popup-window ul li:nth-child(2) svg {
+    color: red;
+  /*color: cornflowerblue;*/
+}
+
+.popup-window ul li:nth-child(4) svg,
+.popup-window ul li:nth-child(5) svg {
+  color: rgb(153, 153, 153);
+}
+
+.popup-window ul li:nth-child(7) svg {
+  color: red;
+}
+
+.popup-window hr {
+  margin: var(--underline-margin-y) 0;
+  border: none;
+  border-bottom: var(--underline-border-width) solid var(--underline-border-color);
+}
+
+/* actions */
+
+.popup-window ul button:hover,
+.popup-window ul button:focus-visible,
+.popup-window ul button:hover svg,
+.popup-window ul button:focus-visible svg {
+  color: var(--nav-button-hover-text-color);
+  background: var(--nav-button-hover-bg);
+}
+
+.burger:hover {
+  transform: scale(var(--burger-hover-scale));
+}
+
+.burger:active {
+  transform: scale(var(--burger-active-scale));
+}
+
+.burger:focus:not(:hover) {
+  outline-color: var(--burger-enable-outline-color);
+  outline-offset: var(--burger-enable-outline-offset);
+}
+
+.popup input:checked+.burger span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.popup input:checked+.burger span:nth-child(2) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+.popup input:checked+.burger span:nth-child(3) {
+  transform: translateX(calc(var(--burger-diameter) * -1 - var(--burger-line-width)));
+}
+
+.popup input:checked~nav {
+  transform: scale(var(--nav-active-scale));
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
+    </style>
+    
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img alt="Logo" height="40" src="Logo.png" width="40" />
+            <h1 style="text-align: center;">
+                TutoTech
+            </h1>
+        </div>
+        <div class="right-section">
+           
+           
+           
+        <!--    <button class="fas fa-bars menu-icon">
+                
+            </button>-->
+
+
+
+            
+<label class="popup">
+  <input type="checkbox">
+  <div class="burger" tabindex="0">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-  <div class="main-content">
-   <div class="welcome-banner" style="background-image: url('https://storage.googleapis.com/a1aa/image/3lxtbOp2fYR0Cyg2ldcTcpZ165WutMSW1k9AYMmutCkCxyzJA.jpg');">
-    <h1 style="color:#007bff">
-     Bienvenido de vuelta, Eros!
-    </h1>
-    <a class="view-all-btn" href="#">
-     View All
-    </a>
-   </div>
-   <!-- Carrusel de películas -->
-<div class="carousel">
-    <div class="carousel-images">
-        <img src="http://www.itsmante.edu.mx/wp-content/uploads/2024/10/ban-becalosingles.png" alt="convocatoria Becalos">
-        <img src="http://www.itsmante.edu.mx/wp-content/uploads/2024/09/banner-sept-08.png" alt="">
-        <img src="http://www.itsmante.edu.mx/wp-content/uploads/2024/09/banner-sept-07.png" alt="">
+  <nav class="popup-window">
+    <legend>Acciones</legend>
+    <ul>
+
+        
+      <!--<li>
+        <button>
+          <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle r="4" cy="7" cx="9"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <span>Colloborators</span>
+        </button>
+      </li>
+      <li>
+        <button>
+          <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+          <span>Magic Link</span>
+        </button>
+      </li>
+      <hr>
+      <li>
+        <button>
+          <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+            <rect ry="2" rx="2" height="13" width="13" y="9" x="9"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span>Clone</span>
+        </button>
+      </li>
+      <li>
+        <button>
+          <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon>
+          </svg>
+          <span>Edit</span>
+        </button>
+      </li>-->
+      <hr>
+      <li>
+        <button onclick="window.location.href='index.html'">
+          <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+            <line y2="18" x2="6" y1="6" x1="18"></line>
+            <line y2="18" x2="18" y1="6" x1="6"></line>
+          </svg>
+          <span>Cerrar Sesion</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</label>
+
+
+
+
+            <button class="profile-button" onclick="window.location.href='Alumno.html'">
+                <img alt="Profile" height="40"
+                    src="https://storage.googleapis.com/a1aa/image/3lxtbOp2fYR0Cyg2ldcTcpZ165WutMSW1k9AYMmutCkCxyzJA.jpg"
+                    width="40" />
+            </button>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="welcome-banner"
+            style="background-image: url('https://storage.googleapis.com/a1aa/image/3lxtbOp2fYR0Cyg2ldcTcpZ165WutMSW1k9AYMmutCkCxyzJA.jpg');">
+            <h1 style="color:#007bff">
+                Bienvenido de vuelta, Eros!
+            </h1>
+            <a class="view-all-btn" href="#">
+                View All
+            </a>
+        </div>
+        <!-- Carrusel de películas -->
+        <div class="carousel">
+            <div class="carousel-images">
+
+                <img src="http://www.itsmante.edu.mx/wp-content/uploads/2024/10/ban-becalosingles.png"
+                    alt="convocatoria Becalos">
+                <img src="http://www.itsmante.edu.mx/wp-content/uploads/2024/09/banner-sept-08.png" alt="">
+                <img src="http://www.itsmante.edu.mx/wp-content/uploads/2024/09/banner-sept-07.png" alt="">
             </div>
-    <button class="carousel-button left" id="prevBtn">&#10094;</button>
-    <button class="carousel-button right" id="nextBtn">&#10095;</button>
-    <div class="carousel-indicators">
-        <div class="active"></div>
-        <div></div>
-        <div></div>
+            <button class="carousel-button left" id="prevBtn">&#10094;</button>
+            <button class="carousel-button right" id="nextBtn">&#10095;</button>
+            <div class="carousel-indicators">
+                <div class="active"></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="trending-paths">
+            <h2>
+                Algunos Cursos Que Te Puedan Interesar
+            </h2>
+            <a style="text-decoration: none;"
+                href="https://www.udemy.com/course/science-of-stress-essentials-of-teenage-health/?gad_source=1">
+                <div class="path">
+                    <img alt="Data Scientist illustration" height="200"
+                        src="https://storage.googleapis.com/a1aa/image/3dn32wQVewxeWEWYRGLRL2v6ora4IMdgaMVUAqf71MxtfVecC.jpg"
+                        width="200" />
+                    <p>
+                        The Science of Stress / Essentials of Teenage Health
+                        <br />
+
+                    </p>
+            </a>
+        </div>
+        <div class="path">
+            <img alt="Illustration of a person with a laptop" height="200"
+                src="https://storage.googleapis.com/a1aa/image/lPbYvGAiOmZsA9YWJL6yLejOucgx9cPBW2IaUJaAOFc6vyzJA.jpg"
+                width="200" />
+            <p>
+                Web Developer
+                <br />
+                by 15 Instructors
+            </p>
+        </div>
+        <div class="path">
+            <img alt="Illustration of a person with headphones" height="200"
+                src="https://storage.googleapis.com/a1aa/image/x0Nekn1q3zw4PyhfIRSfu2RvpPIL6rOn1ZPYNfelQWPNeX55E.jpg"
+                width="200" />
+            <p>
+                Graphic Designer
+                <br />
+                by 10 Instructors
+            </p>
+        </div>
     </div>
-</div>
-   <div class="trending-paths">
-    <h2>
-     Algunos Cursos Que Te Puedan Interesar
-    </h2>
-    <a style="text-decoration: none;" href="https://www.udemy.com/course/science-of-stress-essentials-of-teenage-health/?gad_source=1">
-    <div  class="path">
-     <img alt="Data Scientist illustration" height="200" src="https://storage.googleapis.com/a1aa/image/3dn32wQVewxeWEWYRGLRL2v6ora4IMdgaMVUAqf71MxtfVecC.jpg" width="200"/>
-     <p >
-        The Science of Stress / Essentials of Teenage Health
-      <br/>
-      
-     </p></a>
     </div>
-    <div class="path">
-     <img alt="Illustration of a person with a laptop" height="200" src="https://storage.googleapis.com/a1aa/image/lPbYvGAiOmZsA9YWJL6yLejOucgx9cPBW2IaUJaAOFc6vyzJA.jpg" width="200"/>
-     <p>
-      Web Developer
-      <br/>
-      by 15 Instructors
-     </p>
-    </div>
-    <div class="path">
-     <img alt="Illustration of a person with headphones" height="200" src="https://storage.googleapis.com/a1aa/image/x0Nekn1q3zw4PyhfIRSfu2RvpPIL6rOn1ZPYNfelQWPNeX55E.jpg" width="200"/>
-     <p>
-      Graphic Designer
-      <br/>
-      by 10 Instructors
-     </p>
-    </div>
-   </div>
-  </div>
-  <script>
-    // Carrusel de imágenes
-    let currentIndex = 0;
-    const images = document.querySelectorAll('.carousel-images img');
-    const totalImages = images.length;
-    const indicators = document.querySelectorAll('.carousel-indicators div');
+    <script>
+        // Carrusel de imágenes
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-images img');
+        const totalImages = images.length;
+        const indicators = document.querySelectorAll('.carousel-indicators div');
 
-    function updateCarousel() {
-        const offset = -currentIndex * 100;
-        document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === currentIndex);
-        });
-    }
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
 
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % totalImages;
-        updateCarousel();
-    }
-
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        updateCarousel();
-    }
-
-    // Botones de navegación
-    document.getElementById('nextBtn').addEventListener('click', nextImage);
-    document.getElementById('prevBtn').addEventListener('click', prevImage);
-
-    // Transición automática
-    setInterval(nextImage, 5000);
-
-    // Indicadores manuales
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            currentIndex = index;
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
             updateCarousel();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+        }
+
+        // Botones de navegación
+        document.getElementById('nextBtn').addEventListener('click', nextImage);
+        document.getElementById('prevBtn').addEventListener('click', prevImage);
+
+        // Transición automática
+        setInterval(nextImage, 5000);
+
+        // Indicadores manuales
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
         });
-    });
-  </script>
- </body>
+    </script>
+</body>
+
 </html>
