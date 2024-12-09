@@ -445,8 +445,40 @@
 }
 
 
+.scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+        }
 
 
+
+
+
+        .wrapper {
+          width: 500px;
+          height: 300px;
+          background-size: 100% 100%;
+          box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.25);
+          animation: BgAnimation 10s linear infinite;
+        }
+
+        @keyframes BgAnimation {
+          10% { background-image: url(image.jpg);}
+          30% { background-image: url(image1.jpg);}
+          60% { background-image: url(image2.jpg);}
+          100% { background-image: url(image3.jpg);}
+
+        }
 
     </style>
     
@@ -461,7 +493,7 @@
             </h1>
         </div>
         <div class="right-section">
-           
+            
            
            
         <!--    <button class="fas fa-bars menu-icon">
@@ -555,14 +587,14 @@
                 View All
             </a>
         </div>
-        <!-- Carrusel de películas -->
+        <!-- Carrusel de imagenes -->
         <div class="carousel">
             <div class="carousel-images">
 
-                <img src="http://www.itsmante.edu.mx/wp-content/uploads/2024/10/ban-becalosingles.png"
+                <img src="becalos.png"
                     alt="convocatoria Becalos">
-                <img src="http://www.itsmante.edu.mx/wp-content/uploads/2024/09/banner-sept-08.png" alt="">
-                <img src="http://www.itsmante.edu.mx/wp-content/uploads/2024/09/banner-sept-07.png" alt="">
+                <img src="PodcastSFT.png" alt="">
+                <img src="PodcastSFT2.png" alt="">
             </div>
             <button class="carousel-button left" id="prevBtn">&#10094;</button>
             <button class="carousel-button right" id="nextBtn">&#10095;</button>
@@ -572,6 +604,15 @@
                 <div></div>
             </div>
         </div>
+
+        <h2>
+          Algunos De Nuestros Mas Destacados Alumnos
+      </h2>
+
+        <div class="wrapper"></div>
+
+
+
         <div class="trending-paths">
             <h2>
                 Algunos Cursos Que Te Puedan Interesar
@@ -587,8 +628,10 @@
                         <br />
 
                     </p>
-            </a>
-        </div>
+                    
+                  
+          
+                </div>
         <a style="text-decoration: none;"
             href="EvaluacionDocente.html">
         <div class="path">
@@ -613,8 +656,15 @@
                 Socio-Economica
             </p>
         </div>
+        </a>
+
+        <button class="scroll-top" id="scrollTopBtn">↑</button>
     </div>
     </div>
+   
+
+    
+
     <script>
         // Carrusel de imágenes
         let currentIndex = 0;
@@ -654,6 +704,23 @@
                 updateCarousel();
             });
         });
+
+        // Scroll to top button
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopBtn.style.display = "block";
+        } else {
+            scrollTopBtn.style.display = "none";
+        }
+    };
+
+    scrollTopBtn.onclick = function() {
+        document.body.scrollTop = 0; // Para Safari
+        document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+    };
+
     </script>
 </body>
 
