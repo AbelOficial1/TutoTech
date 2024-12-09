@@ -470,8 +470,13 @@
           background-size: 100% 100%;
           box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.25);
           animation: BgAnimation 10s linear infinite;
+          display: grid;
+          place-items: center;
+          justify-content: center;
+          align-items: center;
+          position:relative;
+          left: 25%
         }
-
         @keyframes BgAnimation {
           10% { background-image: url(image.jpg);}
           30% { background-image: url(image1.jpg);}
